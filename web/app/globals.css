@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-gold: #C5A059;
+    --color-gold-light: #E8DCC4;
+    --bg-black: #000000;
+    --bg-dark: #1A1A1A;
+    --bg-white: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #4A4A4A;
+  }
+
+  body {
+    @apply bg-bg-white text-text-primary antialiased;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-16 md:py-20 lg:py-24;
+  }
+
+  .container-max {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+}
