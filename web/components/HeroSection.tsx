@@ -11,6 +11,8 @@ interface HeroSectionProps {
   highlight?: string;
   ctaText: string;
   ctaLink: string;
+  secondaryCtaText?: string;
+  secondaryCtaLink?: string;
   imageSrc: string;
   imageAlt: string;
 }
@@ -22,6 +24,8 @@ export default function HeroSection({
   highlight,
   ctaText,
   ctaLink,
+  secondaryCtaText,
+  secondaryCtaLink,
   imageSrc,
   imageAlt,
 }: HeroSectionProps) {
@@ -63,32 +67,45 @@ export default function HeroSection({
               </p>
             )}
 
-            <motion.a
-              href={ctaLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              whileHover={{ scale: 1.05, y: -2 }}
-              whileTap={{ scale: 0.98 }}
-              animate={{
-                boxShadow: [
-                  "0 0 0 0 rgba(212, 175, 55, 0)",
-                  "0 0 0 8px rgba(212, 175, 55, 0.1)",
-                  "0 0 0 0 rgba(212, 175, 55, 0)"
-                ]
-              }}
-              transition={{
-                boxShadow: {
-                  duration: 2,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }
-              }}
-              className="cta-animate group relative inline-flex items-center gap-2 overflow-hidden bg-gold px-8 py-4 font-semibold text-bg-black transition-all hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
-            >
-              <span className="relative z-10">{ctaText}</span>
-              <ArrowRight className="relative z-10 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              <div className="absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-            </motion.a>
+            <div className="flex flex-col items-start gap-4 sm:flex-row">
+              <motion.a
+                href={ctaLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05, y: -2 }}
+                whileTap={{ scale: 0.98 }}
+                animate={{
+                  boxShadow: [
+                    "0 0 0 0 rgba(212, 175, 55, 0)",
+                    "0 0 0 8px rgba(212, 175, 55, 0.1)",
+                    "0 0 0 0 rgba(212, 175, 55, 0)"
+                  ]
+                }}
+                transition={{
+                  boxShadow: {
+                    duration: 2,
+                    repeat: Infinity,
+                    ease: "easeInOut"
+                  }
+                }}
+                className="cta-animate group relative inline-flex items-center gap-2 overflow-hidden bg-gold px-8 py-4 font-semibold text-bg-black transition-all hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+              >
+                <span className="relative z-10">{ctaText}</span>
+                <ArrowRight className="relative z-10 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <div className="absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
+              </motion.a>
+
+              {secondaryCtaText && secondaryCtaLink && (
+                <motion.a
+                  href={secondaryCtaLink}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="group inline-flex items-center gap-2 border-2 border-gold px-8 py-4 font-semibold text-gold transition-all hover:bg-gold hover:text-bg-black"
+                >
+                  <span className="relative z-10">{secondaryCtaText}</span>
+                </motion.a>
+              )}
+            </div>
           </motion.div>
 
           {/* Imagem */}
@@ -103,7 +120,7 @@ export default function HeroSection({
                 src={imageSrc}
                 alt={imageAlt}
                 fill
-                className="object-cover"
+                className="object-cover scale-150"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
               <div className="absolute inset-0 bg-gradient-to-br from-gold/5 to-transparent" />

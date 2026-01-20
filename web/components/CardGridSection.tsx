@@ -21,6 +21,8 @@ import {
   AlertTriangle,
   User,
   HelpCircle,
+  MapPin,
+  Home,
   type LucideIcon 
 } from "lucide-react";
 
@@ -45,6 +47,8 @@ const iconMap: Record<string, LucideIcon> = {
   AlertTriangle,
   User,
   HelpCircle,
+  MapPin,
+  Home,
 };
 
 interface CardItem {

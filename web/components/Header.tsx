@@ -25,7 +25,7 @@ export default function Header() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-gold/20 bg-bg-black/95 backdrop-blur-sm" role="banner">
-      <div className="container-max">
+      <div className="mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-6">
         <div className="flex items-center justify-between py-3">
           {/* Logo */}
           <Link 
@@ -46,15 +46,15 @@ export default function Header() {
               <span className="block font-serif text-xl font-bold text-white lg:text-2xl">
                 Dr. Sergio Lins
               </span>
-              <span className="block text-xs uppercase tracking-wider text-gold lg:text-sm">
-                Ginecologia e Obstetrícia
+              <span className="block whitespace-nowrap text-xs uppercase tracking-wider text-gold lg:text-sm">
+                Ginecologista & Obstetra
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:block" aria-label="Navegação principal">
-            <ul className="flex items-center gap-8">
+            <ul className="flex items-center gap-4">
               {menuItems.map((item) => (
                 <li key={item.href || item.label} className="group relative">
                   {item.submenu ? (
@@ -90,7 +90,17 @@ export default function Header() {
                 </li>
               ))}
               
-              {/* CTA Button */}
+              {/* CTA Secundário - Conheça a Clínica */}
+              <li>
+                <Link
+                  href="/clinica"
+                  className="group relative flex items-center justify-center overflow-hidden border-2 border-gold px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-gold transition-all hover:scale-105 hover:bg-gold hover:text-bg-black hover:shadow-xl hover:shadow-gold/30"
+                >
+                  <span className="relative z-10 whitespace-nowrap">Conheça a Clínica</span>
+                </Link>
+              </li>
+              
+              {/* CTA Primário - Agendar */}
               <li>
                 <a
                   href="https://wa.me/5521973907869"
@@ -160,8 +170,19 @@ export default function Header() {
                 </li>
               ))}
               
-              {/* Mobile CTA */}
+              {/* CTA Secundário Mobile - Conheça a Clínica */}
               <li className="pt-4">
+                <Link
+                  href="/clinica"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="group relative block overflow-hidden border-2 border-gold px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-gold transition-all hover:bg-gold hover:text-bg-black"
+                >
+                  <span className="relative z-10">Conheça a Clínica</span>
+                </Link>
+              </li>
+              
+              {/* CTA Primário Mobile - Agendar */}
+              <li className="pt-3">
                 <a
                   href="https://wa.me/5521973907869"
                   target="_blank"
