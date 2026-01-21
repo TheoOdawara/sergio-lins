@@ -30,8 +30,7 @@ export default function HomePage() {
               </h1>
               
               <p className="text-lg leading-relaxed text-white/80 sm:text-xl">
-                Atendimento técnico, acolhedor e focado em você. 
-                Saia da consulta com um plano claro e a segurança de um cuidado profissional.
+                Atendimento especializado, acolhedor e focado em você. Saia da consulta com um plano claro e a segurança de um cuidado profissional.
               </p>
               
               <div className="flex flex-wrap gap-4">
