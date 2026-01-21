@@ -1,6 +1,6 @@
-# Dr. Sérgio Dias Lins — Landing Page de Alta Conversão
+# Dr. Sérgio Dias Lins 
 
-Landing page premium para o consultório do Dr. Sérgio Dias Lins (ginecologia, obstetrícia, infertilidade). Projeto pensado para converter tráfego pago em agendamentos reais, com foco em confiança, velocidade e acessibilidade.
+Landing page premium com redirecionamento para o site principal, para o consultório do Dr. Sérgio Dias Lins (ginecologia, obstetrícia, infertilidade). Projeto pensado para converter tráfego pago em agendamentos reais, com foco em confiança, velocidade e acessibilidade.
 
 ## Visão Geral
 - Interface acolhedora, elegante e funcional para público médico.
@@ -29,7 +29,6 @@ Landing page premium para o consultório do Dr. Sérgio Dias Lins (ginecologia, 
   components/   # Componentes reutilizáveis
   lib/          # Helpers e utilitários
   public/       # Assets estáticos
-  README.md     # Detalhes técnicos da aplicação
   ROADMAP.md    # Marcos de entrega
   NEXT-STEPS.md # Tarefas imediatas
 ```
