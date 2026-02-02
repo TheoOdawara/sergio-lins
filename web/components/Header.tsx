@@ -59,14 +59,14 @@ export default function Header() {
                 <li key={item.href || item.label} className="group relative">
                   {item.submenu ? (
                     <button
-                      className="text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:text-gold"
+                      className="text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:text-gold"
                     >
                       {item.label}
                     </button>
                   ) : (
                     <Link
                       href={item.href}
-                      className="whitespace-nowrap text-sm font-semibold uppercase tracking-wider text-white transition-colors hover:text-gold"
+                      className="whitespace-nowrap text-xs font-semibold uppercase tracking-wider text-white transition-colors hover:text-gold"
                     >
                       {item.label}
                     </Link>
@@ -94,7 +94,7 @@ export default function Header() {
               <li>
                 <Link
                   href="/clinica"
-                  className="group relative flex items-center justify-center overflow-hidden border-2 border-gold px-6 py-3 text-center text-sm font-bold uppercase tracking-wider text-gold transition-all hover:scale-105 hover:bg-gold hover:text-bg-black hover:shadow-xl hover:shadow-gold/30"
+                  className="group relative flex items-center justify-center overflow-hidden border-2 border-gold px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-gold transition-all hover:scale-105 hover:bg-gold hover:text-bg-black hover:shadow-xl hover:shadow-gold/30"
                 >
                   <span className="relative z-10 whitespace-nowrap">Conheça a Clínica</span>
                 </Link>
@@ -106,7 +106,7 @@ export default function Header() {
                   href="https://wa.me/5521973907869"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="cta-animate group relative flex items-center justify-center overflow-hidden bg-gold px-7 py-3 text-center text-sm font-bold uppercase tracking-wider text-bg-black transition-all hover:scale-105 hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/50"
+                  className="cta-animate group relative flex items-center justify-center overflow-hidden bg-gold px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-bg-black transition-all hover:scale-105 hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/50"
                 >
                   <span className="relative z-10">Agendar Consulta</span>
                   <div className="absolute inset-0 -z-0 bg-gradient-to-r from-transparent via-white/30 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
