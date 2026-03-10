@@ -106,6 +106,7 @@ export default function Header() {
                   href="https://wa.me/5521973907869"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => (window as any).gtag_report_conversion?.()}
                   className="cta-animate group relative flex items-center justify-center overflow-hidden bg-gold px-4 py-2 text-center text-xs font-bold uppercase tracking-wider text-bg-black transition-all hover:scale-105 hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/50"
                 >
                   <span className="relative z-10">Agendar Consulta</span>
@@ -187,6 +188,7 @@ export default function Header() {
                   href="https://wa.me/5521973907869"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => (window as any).gtag_report_conversion?.()}
                   className="cta-animate group relative block overflow-hidden bg-gold px-6 py-4 text-center text-sm font-bold uppercase tracking-wider text-bg-black transition-all hover:bg-gold-light hover:shadow-2xl hover:shadow-gold/50"
                 >
                   <span className="relative z-10">Agendar Consulta</span>

@@ -56,6 +56,29 @@ export default function RootLayout({
             gtag('config', 'AW-16547080604');
           `}
         </Script>
+        {/* Conversão de carregamento de página */}
+        <Script id="google-ads-page-conversion" strategy="afterInteractive">
+          {`
+            gtag('event', 'conversion', {'send_to': 'AW-16547080604/QN3QCICMh8sZEJzTodI9'});
+          `}
+        </Script>
+        {/* Função de conversão de clique (WhatsApp) */}
+        <Script id="google-ads-click-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-16547080604/QN3QCICMh8sZEJzTodI9',
+                'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
       </head>
       <body className="min-h-screen bg-bg-white font-sans text-text-primary antialiased">
         {children}

@@ -40,6 +40,7 @@ export default function CTASection({
               href={ctaLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => (window as any).gtag_report_conversion?.()}
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.98 }}
               animate={{
