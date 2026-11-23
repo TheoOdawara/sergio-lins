@@ -51,9 +51,10 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <Phone className="mt-1 h-4 w-4 flex-shrink-0 text-gold" />
                 <a 
-                  href="https://wa.me/5521973907869" 
+                  href="https://wa.me/5521973907869"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={() => (window as any).gtag_report_conversion?.()}
                   className="text-white/70 transition-colors hover:text-gold"
                 >
                   (21) 97390-7869
